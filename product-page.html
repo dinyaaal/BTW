@@ -150,103 +150,118 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="hero relative">
-				<div class="hero__bg absolute w-full h-full top-0 left-0 pointer-events-none">
-					<video autoplay muted loop preload="auto" class="w-full h-full object-cover">
-						<source type="video/mp4" src="img/hero/video.mp4">
-					</video>
-					<!-- <picture><source srcset="img/hero/bg.webp" type="image/webp"><img src="img/hero/bg.jpg" class="w-full h-full object-cover" alt="Image"></picture> -->
-					<div class="hero__bg-blackout absolute top-0 left-0 w-full h-full bg-[#292929] opacity-[0.34]"></div>
-				</div>
-				<div class="hero__container max-w-[1310px] mx-auto px-[15px] py-[100px] md:py-[140px]">
-					<div class="hero__body flex flex-col gap-[80px] justify-center items-center relative z-10">
-						<div class="hero__block  flex flex-col gap-[40px] justify-center items-center">
-							<h1 class=" text-white text-[30px] font-bold md:text-[70px]">BTW</h1>
-							<p class="hero__text text-white md:text-[20px] text-center font-medium leading-[26px]">С нами Вы можете быть уверены, что ваше производство будет обеспечено всем необходимым для бесперебойной работы, благодаря нашим надежным партнерам и их впечатляющему ассортименту запчастей и оборудования.</p>
-						</div>
-						<div class="hero__play group flex flex-col gap-[15px] justify-center items-center ">
-							<button class="button w-[68px] h-[68px] md:w-[106px] md:h-[106px]  hero__play-button">
-								<svg class="w-full h-full" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="53" cy="53" r="52.5" stroke="#07B2B2" />
-									<path class="group-hover:fill-black transition duration-300" d="M76.0665 52.4999L40.8744 72.9515L40.7588 32.2485L76.0665 52.4999Z" fill="white" />
-								</svg>
-							</button>
-							<p class="text-white text-[15px] md:text-[18px] group-hover:text-black transition duration-300">Смотреть полное видео</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="goals relative">
-				<div class="goals__bg absolute w-full h-full pointer-events-none">
-					<picture><source srcset="img/continents.webp" type="image/webp"><img class="w-full h-full object-cover" src="img/continents.png" alt="Image"></picture>
-				</div>
-				<div class="goals__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] pt-[60px] pb-[60px] md:pt-[120px] md:pb-[235px] flex flex-col items-center justify-center gap-[30px] md:gap-[70px]">
-					<div class="goals__top flex flex-col justify-center items-center text-center gap-[30px]">
-						<h2 class="text-[20px] md:text-[35px] font-semibold">Наши цели</h2>
-						<p class="leading-tight-[18.75px]">В мире трейдинга каждая сделка – это возможность, а каждая возможность – это шанс на успех.</p>
-					</div>
-					<div class="goals__items w-full flex flex-wrap justify-center items-stretch gap-[20px]">
-						<div class="item-goals flex max-w-[305px] min-h-[305px] border border-oceanBlue rounded-[15px] px-5 py-[96px]">
-							<div class="item-goals__block flex gap-[10px]">
-								<div class="item-goals__num text-[40px] text-oceanBlue">1</div>
-								<div class="item-goals__text text-[20px] leading-tight-[23px] font-semibold">Повышение узнаваемости и репутации компании на рынке</div>
-							</div>
-						</div>
-						<div class="item-goals flex max-w-[305px] min-h-[305px] border border-oceanBlue rounded-[15px] px-5 py-[96px]">
-							<div class="item-goals__block flex gap-[10px]">
-								<div class="item-goals__num text-[40px] text-oceanBlue">2</div>
-								<div class="item-goals__text text-[20px] leading-tight-[23px] font-semibold">Расширение ассортимента продуктов и услуг</div>
-							</div>
-						</div>
-						<div class="item-goals flex max-w-[305px] min-h-[305px] border border-oceanBlue rounded-[15px] px-5 py-[96px]">
-							<div class="item-goals__block flex gap-[10px]">
-								<div class="item-goals__num text-[40px] text-oceanBlue">3</div>
-								<div class="item-goals__text text-[20px] leading-tight-[23px] font-semibold">Повышение уровня удовлетворенности клиентов и повышение лояльности</div>
-							</div>
-						</div>
-						<div class="item-goals flex max-w-[305px] min-h-[305px] border border-oceanBlue rounded-[15px] px-5 py-[96px]">
-							<div class="item-goals__block flex gap-[10px]">
-								<div class="item-goals__num text-[40px] text-oceanBlue">4</div>
-								<div class="item-goals__text text-[20px] leading-tight-[23px] font-semibold">Участие в социальных проектах и благотворительности.</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<nav class="page__breadcrumbs breadcrumbs border-b border-[#EFEFEF] hidden lg:block">
+				<div class="breadcrumbs__container h-full w-full max-w-[1310px] mx-auto px-[15px] pt-[10px] pb-1">
 
-			</section>
-			<section class="gallery relative">
-				<div class="gallery__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] py-[60px] md:py-[120px] flex flex-col items-center justify-center gap-[30px] md:gap-[100px]">
-					<div class="gallery__top flex flex-col justify-center items-center text-center gap-[30px]">
-						<h2 class="text-[20px] md:text-[35px] font-semibold">Галлерея</h2>
-						<p class="leading-tight-[18.75px]">Мы предлагаем комплексные и масштабные услуги по поиску поставщиков и покупателей. </p>
-					</div>
-					<div data-prlx-parent data-prlx-threshold="768" class="gallery__body grid md:grid-cols-3 gap-[20px]">
-						<div data-prlx data-direction="down" class="gallery__column h-fit relative flex flex-col gap-[20px]">
-							<picture><source srcset="img/gallery/01.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/01.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/02.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/02.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/03.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/03.jpg" alt="Image"></picture>
+					<ul class="breadcrumbs__list flex gap-1 overflow-x-auto">
+						<li class="breadcrumbs__item">
+							<a href="/" class="breadcrumbs__link text-[#C6C6C6] transition duration-300 hover:text-oceanBlue">Главная</a>
+						</li>
+						<div class="text-[#C6C6C6] pointer-events-none">-</div>
+						<li class="breadcrumbs__item">
+							<a href="products.html" class="breadcrumbs__link text-[#C6C6C6] transition duration-300 hover:text-oceanBlue">Продукты</a>
+						</li>
+						<div class="text-[#C6C6C6] pointer-events-none">-</div>
 
-							<div class="decorations flex flex-col justify-between absolute -z-[1] w-full h-full">
-								<div class="relative -translate-x-[5%] -translate-y-[5%] md:-translate-x-[20%] md:-translate-y-[10%] decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[295px]"></div>
-								<div class="relative translate-x-[5%] translate-y-[20%] self-end md:-translate-x-[30%] md:translate-y-[30%] decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[324px]"></div>
-							</div>
-						</div>
-						<div class="gallery__column h-fit relative flex flex-col gap-[20px] md:mt-[45px]">
-							<picture><source srcset="img/gallery/04.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/04.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/05.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/05.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/06.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/06.jpg" alt="Image"></picture>
-						</div>
-						<div data-prlx class="gallery__column h-fit relative flex flex-col gap-[20px] md:mt-[90px]">
-							<picture><source srcset="img/gallery/07.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/07.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/08.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/08.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/09.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/09.jpg" alt="Image"></picture>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__current text-[#C6C6C6] pointer-events-none">Нефтяные продукты</span>
+						</li>
 
-							<div class="decorations flex flex-col justify-between absolute -z-[1] w-full h-full">
-								<div class="relative -translate-x-[10%] -translate-y-[80%] md:translate-x-[20%] md:translate-y-[15%] self-end decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[344px]"></div>
-								<div class="relative translate-x-[5%] -translate-y-[195%] self-end md:translate-x-[20%] md:translate-y-[30%] decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[225px]"></div>
-							</div>
-						</div>
+					</ul>
+				</div>
+			</nav>
+			<section class="products relative">
+				<div class="products__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] pt-[50px] pb-[60px] md:pt-[80px] md:pb-[120px] flex flex-col items-center justify-center gap-[30px] md:gap-[70px]">
+					<div class="products__top flex flex-col justify-center items-center text-center gap-[30px]">
+						<h2 class="text-[20px] md:text-[35px] font-semibold">Нефтяные продукты</h2>
 					</div>
+					<div class="products__items w-full grid [grid-template-columns:repeat(auto-fit,minmax(280px,305px))] justify-center items-stretch gap-[20px]">
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+						<a href="#" class="item-products relative group min-w-[280px] w-full max-w-[305px] aspect-square rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/product-page/01.webp" type="image/webp"><img src="img/product-page/01.jpg" class="item-products__image absolute w-full h-full object-cover" alt="Image"></picture>
+							<div class="item-products__bg-dark absolute w-full h-full bg-[#292929] opacity-[0.16] transition duration-300 group-hover:opacity-[0.55]"></div>
+							<div class="item-products__body relative z-[2] w-full h-full p-[27px] flex justify-center text-center items-end">
+
+								<p class="item-products__text text-[20px] text-white leading-tight-[24px]">Product</p>
+							</div>
+						</a>
+
+
+					</div>
+				</div>
+				<div class="products__bg absolute w-full h-full max-h-[823px] top-0 md:bottom-0 left-0">
+					<picture><source srcset="img/continents.webp" type="image/webp"><img src="img/continents.png" class="w-full h-full object-cover" alt="Image"></picture>
 				</div>
 			</section>
 			<section class="main-contact">

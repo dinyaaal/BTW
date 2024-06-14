@@ -98,19 +98,23 @@
         }
     }), 0);
     document.addEventListener("DOMContentLoaded", (function() {
-        const burger = document.querySelectorAll(".navbar-burger");
-        const menu = document.querySelectorAll(".navbar-menu");
-        if (burger.length && menu.length) for (var i = 0; i < burger.length; i++) burger[i].addEventListener("click", (function() {
-            for (var j = 0; j < menu.length; j++) menu[j].classList.toggle("hidden");
-        }));
-        const close = document.querySelectorAll(".navbar-close");
-        const backdrop = document.querySelectorAll(".navbar-backdrop");
-        if (close.length) for (i = 0; i < close.length; i++) close[i].addEventListener("click", (function() {
-            for (var j = 0; j < menu.length; j++) menu[j].classList.toggle("hidden");
-        }));
-        if (backdrop.length) for (i = 0; i < backdrop.length; i++) backdrop[i].addEventListener("click", (function() {
-            for (var j = 0; j < menu.length; j++) menu[j].classList.toggle("hidden");
-        }));
+        const burger = document.querySelector(".navbar-burger");
+        const menu = document.querySelector(".menu__body");
+        const close = document.querySelector(".navbar-close");
+        const backdrop = document.querySelector(".navbar-backdrop");
+        if (menu) {
+            function openMenu() {
+                menu.classList.add("right-0");
+                backdrop.classList.remove("hidden");
+            }
+            function closeMenu() {
+                menu.classList.remove("right-0");
+                backdrop.classList.add("hidden");
+            }
+            burger.addEventListener("click", openMenu);
+            close.addEventListener("click", closeMenu);
+            backdrop.addEventListener("click", closeMenu);
+        }
     }));
     window["FLS"] = true;
     isWebp();

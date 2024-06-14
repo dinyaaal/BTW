@@ -150,104 +150,73 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="hero relative">
-				<div class="hero__bg absolute w-full h-full top-0 left-0 pointer-events-none">
-					<video autoplay muted loop preload="auto" class="w-full h-full object-cover">
-						<source type="video/mp4" src="img/hero/video.mp4">
-					</video>
-					<!-- <picture><source srcset="img/hero/bg.webp" type="image/webp"><img src="img/hero/bg.jpg" class="w-full h-full object-cover" alt="Image"></picture> -->
-					<div class="hero__bg-blackout absolute top-0 left-0 w-full h-full bg-[#292929] opacity-[0.34]"></div>
+			<nav class="page__breadcrumbs breadcrumbs border-b border-[#EFEFEF] hidden lg:block">
+				<div class="breadcrumbs__container h-full w-full max-w-[1310px] mx-auto px-[15px] pt-[10px] pb-1">
+
+					<ul class="breadcrumbs__list flex gap-1 overflow-x-auto">
+						<li class="breadcrumbs__item">
+							<a href="/" class="breadcrumbs__link text-[#C6C6C6] transition duration-300 hover:text-oceanBlue">Главная</a>
+						</li>
+						<div class="text-[#C6C6C6] pointer-events-none">-</div>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__current text-[#C6C6C6] pointer-events-none">О нас</span>
+						</li>
+
+					</ul>
 				</div>
-				<div class="hero__container max-w-[1310px] mx-auto px-[15px] py-[100px] md:py-[140px]">
-					<div class="hero__body flex flex-col gap-[80px] justify-center items-center relative z-10">
-						<div class="hero__block  flex flex-col gap-[40px] justify-center items-center">
-							<h1 class=" text-white text-[30px] font-bold md:text-[70px]">BTW</h1>
-							<p class="hero__text text-white md:text-[20px] text-center font-medium leading-[26px]">С нами Вы можете быть уверены, что ваше производство будет обеспечено всем необходимым для бесперебойной работы, благодаря нашим надежным партнерам и их впечатляющему ассортименту запчастей и оборудования.</p>
-						</div>
-						<div class="hero__play group flex flex-col gap-[15px] justify-center items-center ">
-							<button class="button w-[68px] h-[68px] md:w-[106px] md:h-[106px]  hero__play-button">
-								<svg class="w-full h-full" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="53" cy="53" r="52.5" stroke="#07B2B2" />
-									<path class="group-hover:fill-black transition duration-300" d="M76.0665 52.4999L40.8744 72.9515L40.7588 32.2485L76.0665 52.4999Z" fill="white" />
-								</svg>
-							</button>
-							<p class="text-white text-[15px] md:text-[18px] group-hover:text-black transition duration-300">Смотреть полное видео</p>
+			</nav>
+			<section class="about-us relative">
+				<div class="about-us__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] py-[60px] md:pt-[80px] md:pb-[110px] flex flex-col items-center justify-center gap-[40px] md:gap-[80px]">
+					<div class="about-us__top w-full flex flex-col justify-center items-center text-center gap-[30px] md:gap-[50px]">
+						<h2 class="text-[20px] md:text-[35px] font-semibold">О нас</h2>
+						<div class="about-us__top-image relative w-full h-fit min-h-[314px] md:min-h-[417px] rounded-[15px] overflow-hidden">
+							<picture><source srcset="img/about/bg.webp" type="image/webp"><img class="absolute w-full h-full object-cover" src="img/about/bg.jpg" alt="Image"></picture>
+							<div class="about-us__top-image-block relative p-[20px] flex flex-col gap-[13px] md:gap-[20px]">
+								<p class="text-white text-start opacity-30 font-semibold max-w-[501px] text-[40px] md:text-[110px] leading-[117.272727%]">What are we doing?</p>
+								<div class="decor w-[81px] h-[59px] md:w-[147px] md:h-[90px] border border-oceanBlue opacity-60 rounded-[15px]"></div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<section class="goals relative">
-				<div class="goals__bg absolute w-full h-full pointer-events-none">
-					<picture><source srcset="img/continents.webp" type="image/webp"><img class="w-full h-full object-cover" src="img/continents.png" alt="Image"></picture>
-				</div>
-				<div class="goals__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] pt-[60px] pb-[60px] md:pt-[120px] md:pb-[235px] flex flex-col items-center justify-center gap-[30px] md:gap-[70px]">
-					<div class="goals__top flex flex-col justify-center items-center text-center gap-[30px]">
-						<h2 class="text-[20px] md:text-[35px] font-semibold">Наши цели</h2>
-						<p class="leading-tight-[18.75px]">В мире трейдинга каждая сделка – это возможность, а каждая возможность – это шанс на успех.</p>
-					</div>
-					<div class="goals__items w-full flex flex-wrap justify-center items-stretch gap-[20px]">
-						<div class="item-goals flex max-w-[305px] min-h-[305px] border border-oceanBlue rounded-[15px] px-5 py-[96px]">
-							<div class="item-goals__block flex gap-[10px]">
-								<div class="item-goals__num text-[40px] text-oceanBlue">1</div>
-								<div class="item-goals__text text-[20px] leading-tight-[23px] font-semibold">Повышение узнаваемости и репутации компании на рынке</div>
+					<div class="about-us__body w-full flex flex-col gap-[40px] md:gap-[90px]">
+						<div class="about-us__item flex md:items-center justify-between flex-col md:flex-row gap-[30px]">
+							<div class="about-us__item-block flex justify-start w-full sm:w-fit flex-shrink-0 relative sm:justify-center items-center py-[67px] sm:px-[132px]">
+								<picture><source srcset="img/about/body/01.webp" type="image/webp"><img class="w-[202px] h-[202px]  relative object-cover" src="img/about/body/01.png" alt="Image"></picture>
+								<div class="decor absolute w-[100vw] h-full rounded-[15px] border border-oceanBlue top-0 right-0"></div>
+							</div>
+							<div class="about-us__item-content flex flex-col gap-[15px] md:gap-[40px] max-w-[650px]">
+								<h3 class="service__title font-semibold text-[18px] md:text-[25px] line-through-[120%]">Наша миссия</h3>
+								<p class="service__text line-through-[26px]">Мы - трейдерская компания, уверенно ведущая свои дела в мире биржевых товаров. Наша миссия заключается в том, чтобы соединять миры и обеспечивать доступ к широкому спектру товаров на глобальных рынках. Мы специализируемся на посредничестве с различными видами товаров, включая нефтепродукты, агрокультуру и драгоценные металлы.</p>
 							</div>
 						</div>
-						<div class="item-goals flex max-w-[305px] min-h-[305px] border border-oceanBlue rounded-[15px] px-5 py-[96px]">
-							<div class="item-goals__block flex gap-[10px]">
-								<div class="item-goals__num text-[40px] text-oceanBlue">2</div>
-								<div class="item-goals__text text-[20px] leading-tight-[23px] font-semibold">Расширение ассортимента продуктов и услуг</div>
+						<div class="about-us__item flex md:items-center justify-between flex-col md:flex-row-reverse gap-[30px]">
+							<div class="about-us__item-block flex w-full justify-end sm:w-fit flex-shrink-0 relative sm:justify-center items-center py-[67px] sm:px-[132px]">
+								<picture><source srcset="img/about/body/02.webp" type="image/webp"><img class="w-[202px] h-[202px]  relative object-cover" src="img/about/body/02.png" alt="Image"></picture>
+								<div class="decor absolute w-[100vw] h-full rounded-[15px] border border-oceanBlue top-0 left-0"></div>
+							</div>
+							<div class="about-us__item-content flex flex-col gap-[15px] md:gap-[40px] max-w-[650px]">
+								<h3 class="service__title font-semibold text-[18px] md:text-[25px] line-through-[120%]">Высокое качество</h3>
+								<p class="service__text line-through-[26px]">
+									Наши профессиональные трейдеры и аналитики работают над поиском лучших возможностей для наших клиентов, обеспечивая оптимальные условия для совершения сделок. Мы стремимся к высочайшему качеству обслуживания и доверительным отношениям с нашими клиентами и партнерами.
+								</p>
 							</div>
 						</div>
-						<div class="item-goals flex max-w-[305px] min-h-[305px] border border-oceanBlue rounded-[15px] px-5 py-[96px]">
-							<div class="item-goals__block flex gap-[10px]">
-								<div class="item-goals__num text-[40px] text-oceanBlue">3</div>
-								<div class="item-goals__text text-[20px] leading-tight-[23px] font-semibold">Повышение уровня удовлетворенности клиентов и повышение лояльности</div>
+						<div class="about-us__item flex md:items-center justify-between flex-col md:flex-row gap-[30px]">
+							<div class="about-us__item-block flex justify-start w-full sm:w-fit flex-shrink-0 relative sm:justify-center items-center py-[67px] sm:px-[132px]">
+								<picture><source srcset="img/about/body/03.webp" type="image/webp"><img class="w-[202px] h-[202px]  relative object-cover" src="img/about/body/03.png" alt="Image"></picture>
+								<div class="decor absolute w-[100vw] h-full rounded-[15px] border border-oceanBlue top-0 right-0"></div>
+							</div>
+							<div class="about-us__item-content flex flex-col gap-[15px] md:gap-[40px] max-w-[650px]">
+								<h3 class="service__title font-semibold text-[18px] md:text-[25px] line-through-[120%]">Надежность</h3>
+								<p class="service__text line-through-[26px]">
+									Благодаря нашей экспертизе и глубокому пониманию рынков, мы предоставляем точные и своевременные информационные обновления, помогая нашим клиентам принимать информированные решения и уверенно оперировать на биржевых площадках.
+									Мы гордимся нашими связями с ведущими поставщиками и партнерами по всему миру, что позволяет нам обеспечивать доступ к самым востребованным товарам и оптимальным условиям для наших клиентов. С нами вы получаете не просто трейдинговый партнер, а надежного соратника на пути к успеху на мировых рынках.
+								</p>
 							</div>
 						</div>
-						<div class="item-goals flex max-w-[305px] min-h-[305px] border border-oceanBlue rounded-[15px] px-5 py-[96px]">
-							<div class="item-goals__block flex gap-[10px]">
-								<div class="item-goals__num text-[40px] text-oceanBlue">4</div>
-								<div class="item-goals__text text-[20px] leading-tight-[23px] font-semibold">Участие в социальных проектах и благотворительности.</div>
-							</div>
-						</div>
+
 					</div>
 				</div>
 
-			</section>
-			<section class="gallery relative">
-				<div class="gallery__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] py-[60px] md:py-[120px] flex flex-col items-center justify-center gap-[30px] md:gap-[100px]">
-					<div class="gallery__top flex flex-col justify-center items-center text-center gap-[30px]">
-						<h2 class="text-[20px] md:text-[35px] font-semibold">Галлерея</h2>
-						<p class="leading-tight-[18.75px]">Мы предлагаем комплексные и масштабные услуги по поиску поставщиков и покупателей. </p>
-					</div>
-					<div data-prlx-parent data-prlx-threshold="768" class="gallery__body grid md:grid-cols-3 gap-[20px]">
-						<div data-prlx data-direction="down" class="gallery__column h-fit relative flex flex-col gap-[20px]">
-							<picture><source srcset="img/gallery/01.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/01.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/02.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/02.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/03.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/03.jpg" alt="Image"></picture>
-
-							<div class="decorations flex flex-col justify-between absolute -z-[1] w-full h-full">
-								<div class="relative -translate-x-[5%] -translate-y-[5%] md:-translate-x-[20%] md:-translate-y-[10%] decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[295px]"></div>
-								<div class="relative translate-x-[5%] translate-y-[20%] self-end md:-translate-x-[30%] md:translate-y-[30%] decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[324px]"></div>
-							</div>
-						</div>
-						<div class="gallery__column h-fit relative flex flex-col gap-[20px] md:mt-[45px]">
-							<picture><source srcset="img/gallery/04.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/04.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/05.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/05.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/06.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/06.jpg" alt="Image"></picture>
-						</div>
-						<div data-prlx class="gallery__column h-fit relative flex flex-col gap-[20px] md:mt-[90px]">
-							<picture><source srcset="img/gallery/07.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/07.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/08.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/08.jpg" alt="Image"></picture>
-							<picture><source srcset="img/gallery/09.webp" type="image/webp"><img class="rounded-[15px] w-full object-cover" src="img/gallery/09.jpg" alt="Image"></picture>
-
-							<div class="decorations flex flex-col justify-between absolute -z-[1] w-full h-full">
-								<div class="relative -translate-x-[10%] -translate-y-[80%] md:translate-x-[20%] md:translate-y-[15%] self-end decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[344px]"></div>
-								<div class="relative translate-x-[5%] -translate-y-[195%] self-end md:translate-x-[20%] md:translate-y-[30%] decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[225px]"></div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</section>
 			<section class="main-contact">
 				<div class="main-contact__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] py-[60px] md:py-[120px] flex flex-col items-center justify-center gap-[30px] md:gap-[100px]">
