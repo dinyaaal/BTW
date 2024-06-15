@@ -6,13 +6,13 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240614220028">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240615174431">
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&_v=20240614220028" rel="stylesheet">
-	<script src="https://cdn.tailwindcss.com?_v=20240614220028"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&_v=20240615174431" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com?_v=20240615174431"></script>
 	<script>
 		tailwind.config = {
 			theme: {
@@ -23,6 +23,9 @@
 					colors: {
 						oceanBlue: '#07B2B2',
 
+					},
+					screens: {
+						'375px': '375px',
 					},
 					gap: {
 						'10px': '10px',
@@ -37,6 +40,19 @@
 		}
 	</script>
 	<style>
+		::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color: #07B2B2;
+			border-radius: 20px;
+		}
+
 		/* Добавить стили, если не используете отдельный CSS файл */
 		input[type='number']::-webkit-outer-spin-button,
 		input[type='number']::-webkit-inner-spin-button {
@@ -54,6 +70,28 @@
 
 					<a href="#" class="header__logo text-[30px] font-bold hover:text-oceanBlue transition duration-300">BTW</a>
 
+
+					<ul class="hidden lg:flex lg:mx-auto gap-[20px] lg:items-center lg:w-full max-w-[523px] justify-between ">
+						<li class="menu__item"><a href="/" class="menu__link hover:text-oceanBlue transition duration-300">Главная</a></li>
+						<li class="menu__item"><a href="products.html" class="menu__link hover:text-oceanBlue transition duration-300">Продукты</a></li>
+						<li class="menu__item"><a href="services.html" class="menu__link hover:text-oceanBlue transition duration-300">Услуги</a></li>
+						<li class="menu__item"><a href="contacts.html" class="menu__link hover:text-oceanBlue transition duration-300">Контакты</a></li>
+						<li class="menu__item"><a href="about-us.html" class="menu__link hover:text-oceanBlue transition duration-300">О нас</a></li>
+					</ul>
+					<div class="header__actions flex items-center lg:max-w-[281px] lg:w-full justify-between gap-[20px]">
+						<a href="tel:+380987654321" class="number group hidden 375px:flex items-center gap-[10px] ">
+							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.2712 11.6483L12.1737 9.81203C11.988 9.73248 11.7855 9.70049 11.5843 9.71897C11.3832 9.73745 11.1898 9.8058 11.0218 9.91785C11.0048 9.92884 10.9885 9.94101 10.9732 9.95428L8.83166 11.7758C8.80944 11.7879 8.7847 11.7947 8.75941 11.7956C8.73412 11.7965 8.70897 11.7915 8.68594 11.781C7.30941 11.1166 5.88344 9.69927 5.21642 8.34182C5.20532 8.31914 5.19954 8.29422 5.19954 8.26896C5.19954 8.2437 5.20532 8.21878 5.21642 8.1961L7.04399 6.02765C7.05713 6.01162 7.06929 5.99482 7.08042 5.97734C7.19092 5.80864 7.25766 5.61508 7.27462 5.41413C7.29158 5.21318 7.25822 5.01117 7.17757 4.82633L5.35434 0.735777C5.2508 0.494306 5.07173 0.29293 4.84402 0.161871C4.61631 0.0308124 4.35224 -0.0228586 4.09143 0.00891317C2.95797 0.157926 1.91754 0.714559 1.16457 1.57479C0.411608 2.43503 -0.00236593 3.54 1.01721e-05 4.68322C1.01721e-05 11.4748 5.52521 17 12.3168 17C13.46 17.0022 14.5648 16.5881 15.425 15.8352C16.2852 15.0823 16.8419 14.042 16.9911 12.9086C17.0228 12.649 16.9699 12.3861 16.8401 12.159C16.7104 11.9319 16.5109 11.7528 16.2712 11.6483ZM12.3168 15.9591C6.09942 15.9591 1.04086 10.9006 1.04086 4.68322C1.03796 3.79322 1.3592 2.93262 1.94454 2.2622C2.52988 1.59177 3.33929 1.1574 4.22154 1.04023H4.24149C4.27645 1.04088 4.31039 1.05208 4.33887 1.07235C4.36735 1.09263 4.38903 1.12104 4.40109 1.15385L6.23126 5.24007C6.2417 5.26279 6.2471 5.2875 6.2471 5.3125C6.2471 5.3375 6.2417 5.36221 6.23126 5.38493L4.40022 7.55858C4.38663 7.57415 4.37416 7.59067 4.36292 7.60802C4.24835 7.78293 4.18088 7.98446 4.16705 8.19311C4.15322 8.40175 4.1935 8.61042 4.28399 8.79893C5.05336 10.3741 6.64066 11.9492 8.23317 12.7186C8.42277 12.8086 8.63247 12.8479 8.84179 12.8327C9.05112 12.8175 9.25293 12.7483 9.42755 12.6319C9.44403 12.6206 9.46051 12.6085 9.47612 12.5954L11.6168 10.7739C11.638 10.7626 11.6613 10.7559 11.6853 10.7544C11.7092 10.7529 11.7332 10.7566 11.7556 10.7653L15.854 12.6015C15.8874 12.6158 15.9156 12.6402 15.9344 12.6713C15.9532 12.7025 15.9618 12.7387 15.9589 12.775C15.8424 13.6576 15.4084 14.4677 14.7381 15.0537C14.0678 15.6397 13.2071 15.9615 12.3168 15.9591Z" fill="#292929" />
+							</svg>
+							<p class="group-hover:text-oceanBlue transition duration-300">+38 (098) 765 43 21</p>
+						</a>
+
+						<div class="language hidden lg:flex items-center gap-[5px]">
+							<a href="#" class="transition duration-300 hover:text-oceanBlue">EN</a>
+							|
+							<a href="#" class="text-oceanBlue">RU</a>
+						</div>
+					</div>
 					<div class="lg:hidden">
 						<button class=" navbar-burger flex items-center">
 
@@ -62,27 +100,6 @@
 							</svg>
 
 						</button>
-					</div>
-					<ul class="hidden lg:flex lg:mx-auto gap-[20px] lg:items-center lg:w-full max-w-[523px] justify-between ">
-						<li class="menu__item"><a href="/" class="menu__link hover:text-oceanBlue transition duration-300">Главная</a></li>
-						<li class="menu__item"><a href="products.html" class="menu__link hover:text-oceanBlue transition duration-300">Продукты</a></li>
-						<li class="menu__item"><a href="services.html" class="menu__link hover:text-oceanBlue transition duration-300">Услуги</a></li>
-						<li class="menu__item"><a href="contacts.html" class="menu__link hover:text-oceanBlue transition duration-300">Контакты</a></li>
-						<li class="menu__item"><a href="about-us.html" class="menu__link hover:text-oceanBlue transition duration-300">О нас</a></li>
-					</ul>
-					<div class="header__actions hidden lg:flex items-center max-w-[281px] w-full justify-between gap[20px]">
-						<a href="tel:+380987654321" class="number group flex items-center gap-10px ">
-							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M16.2712 11.6483L12.1737 9.81203C11.988 9.73248 11.7855 9.70049 11.5843 9.71897C11.3832 9.73745 11.1898 9.8058 11.0218 9.91785C11.0048 9.92884 10.9885 9.94101 10.9732 9.95428L8.83166 11.7758C8.80944 11.7879 8.7847 11.7947 8.75941 11.7956C8.73412 11.7965 8.70897 11.7915 8.68594 11.781C7.30941 11.1166 5.88344 9.69927 5.21642 8.34182C5.20532 8.31914 5.19954 8.29422 5.19954 8.26896C5.19954 8.2437 5.20532 8.21878 5.21642 8.1961L7.04399 6.02765C7.05713 6.01162 7.06929 5.99482 7.08042 5.97734C7.19092 5.80864 7.25766 5.61508 7.27462 5.41413C7.29158 5.21318 7.25822 5.01117 7.17757 4.82633L5.35434 0.735777C5.2508 0.494306 5.07173 0.29293 4.84402 0.161871C4.61631 0.0308124 4.35224 -0.0228586 4.09143 0.00891317C2.95797 0.157926 1.91754 0.714559 1.16457 1.57479C0.411608 2.43503 -0.00236593 3.54 1.01721e-05 4.68322C1.01721e-05 11.4748 5.52521 17 12.3168 17C13.46 17.0022 14.5648 16.5881 15.425 15.8352C16.2852 15.0823 16.8419 14.042 16.9911 12.9086C17.0228 12.649 16.9699 12.3861 16.8401 12.159C16.7104 11.9319 16.5109 11.7528 16.2712 11.6483ZM12.3168 15.9591C6.09942 15.9591 1.04086 10.9006 1.04086 4.68322C1.03796 3.79322 1.3592 2.93262 1.94454 2.2622C2.52988 1.59177 3.33929 1.1574 4.22154 1.04023H4.24149C4.27645 1.04088 4.31039 1.05208 4.33887 1.07235C4.36735 1.09263 4.38903 1.12104 4.40109 1.15385L6.23126 5.24007C6.2417 5.26279 6.2471 5.2875 6.2471 5.3125C6.2471 5.3375 6.2417 5.36221 6.23126 5.38493L4.40022 7.55858C4.38663 7.57415 4.37416 7.59067 4.36292 7.60802C4.24835 7.78293 4.18088 7.98446 4.16705 8.19311C4.15322 8.40175 4.1935 8.61042 4.28399 8.79893C5.05336 10.3741 6.64066 11.9492 8.23317 12.7186C8.42277 12.8086 8.63247 12.8479 8.84179 12.8327C9.05112 12.8175 9.25293 12.7483 9.42755 12.6319C9.44403 12.6206 9.46051 12.6085 9.47612 12.5954L11.6168 10.7739C11.638 10.7626 11.6613 10.7559 11.6853 10.7544C11.7092 10.7529 11.7332 10.7566 11.7556 10.7653L15.854 12.6015C15.8874 12.6158 15.9156 12.6402 15.9344 12.6713C15.9532 12.7025 15.9618 12.7387 15.9589 12.775C15.8424 13.6576 15.4084 14.4677 14.7381 15.0537C14.0678 15.6397 13.2071 15.9615 12.3168 15.9591Z" fill="#292929" />
-							</svg>
-							<p class="group-hover:text-oceanBlue transition duration-300">+38 (098) 765 43 21</p>
-						</a>
-
-						<div class="language flex items-center gap-[5px]">
-							<a href="#" class="transition duration-300 hover:text-oceanBlue">EN</a>
-							|
-							<a href="#" class="text-oceanBlue">RU</a>
-						</div>
 					</div>
 				</nav>
 				<div class="navbar-menu relative z-50">
@@ -155,7 +172,6 @@
 					<video autoplay muted loop preload="auto" class="w-full h-full object-cover">
 						<source type="video/mp4" src="img/hero/video.mp4">
 					</video>
-					<!-- <picture><source srcset="img/hero/bg.webp" type="image/webp"><img src="img/hero/bg.jpg" class="w-full h-full object-cover" alt="Image"></picture> -->
 					<div class="hero__bg-blackout absolute top-0 left-0 w-full h-full bg-[#292929] opacity-[0.34]"></div>
 				</div>
 				<div class="hero__container max-w-[1310px] mx-auto px-[15px] py-[100px] md:py-[140px]">
@@ -342,7 +358,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240614220028"></script>
+	<script src="js/app.min.js?_v=20240615174431"></script>
 </body>
 
 </html>
