@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240620170401">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&_v=20240620170401" rel="stylesheet">
+	<script src="https://cdn.tailwindcss.com?_v=20240620170401"></script>
+	<script>
+		tailwind.config = {
+			darkMode: 'class',
+			theme: {
+				extend: {
+					fontFamily: {
+						roboto: ['Roboto', 'sans-serif'],
+					},
+					colors: {
+						oceanBlue: '#07B2B2',
+						darkBg: '#1C1C1C',
+						darkSecondary: '#292929',
+					},
+					screens: {
+						'375px': '375px',
+					},
+					gap: {
+						'10px': '10px',
+						'55px': '55px',
+
+					},
+					boxShadow: {
+						'main': '0px 4px 15px 0px #CFCFCF26',
+					}
+				}
+			}
+		}
+	</script>
+	<style>
+		::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color: #07B2B2;
+			border-radius: 20px;
+		}
+
+		input[type='number']::-webkit-outer-spin-button,
+		input[type='number']::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	</style>
+</head>
+
+<body class="dark:bg-darkBg dark:text-white">
+	<div class="wrapper font-roboto overflow-x-hidden">
+		<header class="relative z-40 header bg-white dark:text-white dark:bg-darkBg shadow-main dark:shadow-none">
+			<div class="header__container max-w-[1310px] mx-auto px-[15px] py-[5px] h-[80px] flex items-center justify-between">
+				<nav class="w-full relative flex justify-between items-center gap-[20px]">
+
+					<a href="/" class="header__logo text-[30px] font-bold hover:text-oceanBlue transition duration-300">BTW</a>
+
+
+					<ul class="hidden lg:flex lg:mx-auto gap-[20px] lg:items-center lg:w-full max-w-[523px] justify-between ">
+						<li class="menu__item"><a href="/" class="menu__link hover:text-oceanBlue transition duration-300">Главная</a></li>
+						<li class="menu__item"><a href="products.html" class="menu__link hover:text-oceanBlue transition duration-300">Продукты</a></li>
+						<li class="menu__item"><a href="services.html" class="menu__link hover:text-oceanBlue transition duration-300">Услуги</a></li>
+						<li class="menu__item"><a href="contacts.html" class="menu__link hover:text-oceanBlue transition duration-300">Контакты</a></li>
+						<li class="menu__item"><a href="about-us.html" class="menu__link hover:text-oceanBlue transition duration-300">О нас</a></li>
+					</ul>
+					<div class="header__actions flex items-center lg:max-w-[281px] lg:w-full justify-between gap-[20px]">
+						<a href="tel:+447778141560" class="number group hidden 375px:flex items-center gap-[10px] ">
+							<svg class="dark:stroke-white" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.2712 11.6483L12.1737 9.81203C11.988 9.73248 11.7855 9.70049 11.5843 9.71897C11.3832 9.73745 11.1898 9.8058 11.0218 9.91785C11.0048 9.92884 10.9885 9.94101 10.9732 9.95428L8.83166 11.7758C8.80944 11.7879 8.7847 11.7947 8.75941 11.7956C8.73412 11.7965 8.70897 11.7915 8.68594 11.781C7.30941 11.1166 5.88344 9.69927 5.21642 8.34182C5.20532 8.31914 5.19954 8.29422 5.19954 8.26896C5.19954 8.2437 5.20532 8.21878 5.21642 8.1961L7.04399 6.02765C7.05713 6.01162 7.06929 5.99482 7.08042 5.97734C7.19092 5.80864 7.25766 5.61508 7.27462 5.41413C7.29158 5.21318 7.25822 5.01117 7.17757 4.82633L5.35434 0.735777C5.2508 0.494306 5.07173 0.29293 4.84402 0.161871C4.61631 0.0308124 4.35224 -0.0228586 4.09143 0.00891317C2.95797 0.157926 1.91754 0.714559 1.16457 1.57479C0.411608 2.43503 -0.00236593 3.54 1.01721e-05 4.68322C1.01721e-05 11.4748 5.52521 17 12.3168 17C13.46 17.0022 14.5648 16.5881 15.425 15.8352C16.2852 15.0823 16.8419 14.042 16.9911 12.9086C17.0228 12.649 16.9699 12.3861 16.8401 12.159C16.7104 11.9319 16.5109 11.7528 16.2712 11.6483ZM12.3168 15.9591C6.09942 15.9591 1.04086 10.9006 1.04086 4.68322C1.03796 3.79322 1.3592 2.93262 1.94454 2.2622C2.52988 1.59177 3.33929 1.1574 4.22154 1.04023H4.24149C4.27645 1.04088 4.31039 1.05208 4.33887 1.07235C4.36735 1.09263 4.38903 1.12104 4.40109 1.15385L6.23126 5.24007C6.2417 5.26279 6.2471 5.2875 6.2471 5.3125C6.2471 5.3375 6.2417 5.36221 6.23126 5.38493L4.40022 7.55858C4.38663 7.57415 4.37416 7.59067 4.36292 7.60802C4.24835 7.78293 4.18088 7.98446 4.16705 8.19311C4.15322 8.40175 4.1935 8.61042 4.28399 8.79893C5.05336 10.3741 6.64066 11.9492 8.23317 12.7186C8.42277 12.8086 8.63247 12.8479 8.84179 12.8327C9.05112 12.8175 9.25293 12.7483 9.42755 12.6319C9.44403 12.6206 9.46051 12.6085 9.47612 12.5954L11.6168 10.7739C11.638 10.7626 11.6613 10.7559 11.6853 10.7544C11.7092 10.7529 11.7332 10.7566 11.7556 10.7653L15.854 12.6015C15.8874 12.6158 15.9156 12.6402 15.9344 12.6713C15.9532 12.7025 15.9618 12.7387 15.9589 12.775C15.8424 13.6576 15.4084 14.4677 14.7381 15.0537C14.0678 15.6397 13.2071 15.9615 12.3168 15.9591Z" fill="#292929" />
+							</svg>
+							<p class="group-hover:text-oceanBlue transition duration-300">+38 (098) 765 43 21</p>
+						</a>
+
+						<div class="language hidden lg:flex items-center gap-[5px]">
+							<a href="#" class="transition duration-300 hover:text-oceanBlue">EN</a>
+							|
+							<a href="#" class="text-oceanBlue">RU</a>
+						</div>
+					</div>
+					<div class="lg:hidden">
+						<button class=" navbar-burger flex items-center">
+
+							<svg class="block w-[36px] h-[21px]" width="36" height="21" viewBox="0 0 36 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1H35M1 10.5H35M1 20H35" stroke="#07B2B2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+							</svg>
+
+						</button>
+					</div>
+				</nav>
+				<div class="navbar-menu relative z-50">
+					<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25 hidden"></div>
+					<nav class="menu__body fixed top-0 -right-[100%]  pointer-events-none  h-full max-h-fit w-[90%] max-w-sm overflow-y-auto transition-all duration-300">
+						<div class="menu__wrapper pointer-events-auto flex flex-col gap-[50px] bg-white dark:bg-darkBg py-[40px] px-[50px] rounded-es-[10px]">
+
+							<div class="flex items-center justify-between">
+								<a href="#" class="header__logo text-[30px] font-bold hover:text-oceanBlue transition duration-300">BTW</a>
+
+								<button class="navbar-close">
+									<svg class="w-[35px] h-[35px]" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M8.71216 8.71216L26.1367 26.1367" stroke="#07B2B2" stroke-linecap="round" />
+										<path d="M8.29736 25.7218L25.7219 8.29724" stroke="#07B2B2" stroke-linecap="round" />
+									</svg>
+
+								</button>
+							</div>
+							<div>
+								<ul class="flex flex-col gap-[30px]">
+									<li class="menu__item"><a href="/" class="menu__link hover:text-oceanBlue transition duration-300">Home</a></li>
+									<li class="menu__item"><a href="products.html" class="menu__link hover:text-oceanBlue transition duration-300">Products</a></li>
+									<li class="menu__item"><a href="services.html" class="menu__link hover:text-oceanBlue transition duration-300">Services</a></li>
+									<li class="menu__item"><a href="contacts.html" class="menu__link hover:text-oceanBlue transition duration-300">Contact</a></li>
+									<li class="menu__item"><a href="about-us.html" class="menu__link hover:text-oceanBlue transition duration-300">About Us</a></li>
+								</ul>
+							</div>
+
+							<div class="header__actions mt-auto flex flex-col max-w-[281px] w-full justify-start gap-[40px]">
+								<a href="tel:+447778141560" class="number group flex items-center gap-10px ">
+									<svg class="dark:stroke-white" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M16.2712 11.6483L12.1737 9.81203C11.988 9.73248 11.7855 9.70049 11.5843 9.71897C11.3832 9.73745 11.1898 9.8058 11.0218 9.91785C11.0048 9.92884 10.9885 9.94101 10.9732 9.95428L8.83166 11.7758C8.80944 11.7879 8.7847 11.7947 8.75941 11.7956C8.73412 11.7965 8.70897 11.7915 8.68594 11.781C7.30941 11.1166 5.88344 9.69927 5.21642 8.34182C5.20532 8.31914 5.19954 8.29422 5.19954 8.26896C5.19954 8.2437 5.20532 8.21878 5.21642 8.1961L7.04399 6.02765C7.05713 6.01162 7.06929 5.99482 7.08042 5.97734C7.19092 5.80864 7.25766 5.61508 7.27462 5.41413C7.29158 5.21318 7.25822 5.01117 7.17757 4.82633L5.35434 0.735777C5.2508 0.494306 5.07173 0.29293 4.84402 0.161871C4.61631 0.0308124 4.35224 -0.0228586 4.09143 0.00891317C2.95797 0.157926 1.91754 0.714559 1.16457 1.57479C0.411608 2.43503 -0.00236593 3.54 1.01721e-05 4.68322C1.01721e-05 11.4748 5.52521 17 12.3168 17C13.46 17.0022 14.5648 16.5881 15.425 15.8352C16.2852 15.0823 16.8419 14.042 16.9911 12.9086C17.0228 12.649 16.9699 12.3861 16.8401 12.159C16.7104 11.9319 16.5109 11.7528 16.2712 11.6483ZM12.3168 15.9591C6.09942 15.9591 1.04086 10.9006 1.04086 4.68322C1.03796 3.79322 1.3592 2.93262 1.94454 2.2622C2.52988 1.59177 3.33929 1.1574 4.22154 1.04023H4.24149C4.27645 1.04088 4.31039 1.05208 4.33887 1.07235C4.36735 1.09263 4.38903 1.12104 4.40109 1.15385L6.23126 5.24007C6.2417 5.26279 6.2471 5.2875 6.2471 5.3125C6.2471 5.3375 6.2417 5.36221 6.23126 5.38493L4.40022 7.55858C4.38663 7.57415 4.37416 7.59067 4.36292 7.60802C4.24835 7.78293 4.18088 7.98446 4.16705 8.19311C4.15322 8.40175 4.1935 8.61042 4.28399 8.79893C5.05336 10.3741 6.64066 11.9492 8.23317 12.7186C8.42277 12.8086 8.63247 12.8479 8.84179 12.8327C9.05112 12.8175 9.25293 12.7483 9.42755 12.6319C9.44403 12.6206 9.46051 12.6085 9.47612 12.5954L11.6168 10.7739C11.638 10.7626 11.6613 10.7559 11.6853 10.7544C11.7092 10.7529 11.7332 10.7566 11.7556 10.7653L15.854 12.6015C15.8874 12.6158 15.9156 12.6402 15.9344 12.6713C15.9532 12.7025 15.9618 12.7387 15.9589 12.775C15.8424 13.6576 15.4084 14.4677 14.7381 15.0537C14.0678 15.6397 13.2071 15.9615 12.3168 15.9591Z" fill="#292929" />
+									</svg>
+									<p class="group-hover:text-oceanBlue transition duration-300">+38 (098) 765 43 21</p>
+								</a>
+
+								<div class="language flex items-center gap-[5px]">
+									<a href="#" class="transition duration-300 hover:text-oceanBlue">EN</a>
+									|
+									<a href="#" class="text-oceanBlue">RU</a>
+								</div>
+							</div>
+						</div>
+
+					</nav>
+				</div>
+
+
+			</div>
+		</header>
+		<main class="page">
+			<nav class="page__breadcrumbs breadcrumbs border-b border-[#EFEFEF] hidden lg:block">
+				<div class="breadcrumbs__container h-full w-full max-w-[1310px] mx-auto px-[15px] pt-[10px] pb-1">
+
+					<ul class="breadcrumbs__list flex gap-1 overflow-x-auto">
+						<li class="breadcrumbs__item">
+							<a href="/" class="breadcrumbs__link text-[#C6C6C6] transition duration-300 hover:text-oceanBlue">Главная</a>
+						</li>
+						<div class="text-[#C6C6C6] pointer-events-none">-</div>
+						<li class="breadcrumbs__item">
+							<a href="products.html" class="breadcrumbs__link text-[#C6C6C6] transition duration-300 hover:text-oceanBlue">Продукты</a>
+						</li>
+						<div class="text-[#C6C6C6] pointer-events-none">-</div>
+						<li class="breadcrumbs__item">
+							<a href="products-metals.html" class="breadcrumbs__link text-[#C6C6C6] transition duration-300 hover:text-oceanBlue">Цветные и драгоценные металлы</a>
+
+						</li>
+						<div class="text-[#C6C6C6] pointer-events-none">-</div>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__current text-[#C6C6C6] pointer-events-none">Осмий </span>
+						</li>
+
+					</ul>
+				</div>
+			</nav>
+			<section class="service relative">
+				<div class="service__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] pt-[50px] pb-[60px] md:pt-[80px] md:pb-[120px] flex flex-col items-center justify-center gap-[30px] md:gap-[70px]">
+					<div class="service__top flex flex-col justify-center items-center text-center gap-[30px]">
+						<h2 class="text-[20px] md:text-[35px] font-semibold">Осмий </h2>
+					</div>
+					<div class="service__body w-full flex flex-col gap-[50px] items-center">
+						<div class="product-item w-full flex flex-col lg:flex-row gap-[30px] justify-between items-center">
+							<div class="service__image w-full h-full lg:flex-shrink-0 rounded-[15px] max-w-[542px] max-h-[493px] overflow-hidden">
+								<picture><source srcset="img/products/metals/silver/01.webp" type="image/webp"><img src="img/products/metals/silver/01.jpg" class="w-full h-full object-cover" alt="Image"></picture>
+							</div>
+							<div class="service__content max-w-[650px] flex flex-col gap-[15px] md:gap-[40px]">
+								<div class="flex flex-col gap-[10px]">
+									<h3 class="service__title font-semibold text-[18px] md:text-[25px] line-through-[120%]">Описание:</h3>
+									<p class="service__text line-through-[26px]">Осмий представляет собой тяжелый и крайне твердый металл серебристо-белого цвета.</p>
+
+								</div>
+
+								<div class="flex flex-col gap-[10px]">
+									<h3 class="service__title font-semibold text-[18px] md:text-[25px] line-through-[120%]">Применение:</h3>
+									<p class="service__text line-through-[26px]">Осмий используется в качестве добавки для улучшения свойств сплавов, в катализаторах, в научных исследованиях и некоторых медицинских приборах.</p>
+
+								</div>
+								<div class="flex flex-col gap-[10px]">
+									<h3 class="service__title font-semibold text-[18px] md:text-[25px] line-through-[120%]">Добыча:</h3>
+									<p class="service__text line-through-[26px]">Основные страны-добытчики включают Южно-Африканскую Республику и Россию.</p>
+
+								</div>
+								<div class="flex flex-col gap-[10px]">
+									<h3 class="service__title font-semibold text-[18px] md:text-[25px] line-through-[120%]">Уникальные свойства:</h3>
+									<p class="service__text line-through-[26px]">Осмий обладает одними из самых высоких значений плотности и температуры плавления среди всех элементов. Он также является одним из самых инертных химических элементов, что делает его стойким к коррозии и химическим атакам.</p>
+
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<div class="service__body-bottom w-full">
+						<div class="service__content max-w-[650px] flex flex-col items-center gap-[15px] md:gap-[40px]">
+							<div class="flex flex-col gap-[10px]">
+								<p class="service__text line-through-[26px]">
+									Осмий, хоть и не так широко распространен как платина или золото, играет важную роль в технологиях и научных исследованиях благодаря своим уникальным свойствам и возможностям применения в специализированных областях.
+								</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="products__bg absolute w-full h-full bottom-0 left-0">
+					<picture><source srcset="img/continents.webp" type="image/webp"><img src="img/continents.png" class="w-full h-full object-cover" alt="Image"></picture>
+				</div>
+			</section>
+			<section class="main-contact">
+				<div class="main-contact__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] py-[60px] md:py-[120px] flex flex-col items-center justify-center gap-[30px] md:gap-[100px]">
+					<div class="main-contact__body relative min-h-[433px] h-full rounded-[15px] w-full px-[44px] py-[50px] flex  items-center justify-center bg-[#292929]">
+						<div class="main-contact__bg absolute w-full h-full pointer-events-none">
+							<picture><source srcset="img/continents-dark.webp" type="image/webp"><img class="w-full h-full object-cover" src="img/continents-dark.png" alt="Background"></picture>
+						</div>
+						<div class="main-contact__content relative z-[2] flex flex-col gap-[50px] md:gap-[65px] items-center justify-center">
+
+							<div class="main-contact__top max-w-[816px] flex flex-col justify-center items-center text-center gap-[30px] text-white">
+								<h2 class="text-[20px] md:text-[35px] font-semibold">Figma ipsum component variant main layer</h2>
+								<p class="leading-tight-[18.75px]">Figma ipsum component variant main layer. Scrolling create bullet community comment. Auto scrolling library boolean rotate rotate vertical thumbnail arrow slice.</p>
+							</div>
+							<a href="contacts.html" class="btn rounded-[10px] max-w-[211px] w-full h-[59px] bg-oceanBlue inline-flex items-center justify-center text-center p-[5px] text-white transition duration-300 hover:bg-white hover:text-oceanBlue">
+								Связаться с нами
+							</a>
+						</div>
+						<div class="decorations flex justify-between absolute -z-[1] w-full h-full">
+							<div class="relative -translate-x-[5%] translate-y-[10%] md:-translate-x-[20%] md:translate-y-[30%] self-end decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[225px]"></div>
+							<div class="relative translate-x-[5%] -translate-y-[10%] self-start md:translate-x-[20%] md:-translate-y-[30%] decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[225px]"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer relative overflow-hidden w-full bg-[#EFEFEF] dark:bg-darkSecondary">
+			<div class="decorations flex flex-col md:flex-row justify-between absolute w-full h-full">
+				<div class="relative -translate-x-[80%] translate-y-[20%] md:-translate-x-[80%] self-start md:self-center decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[225px]"></div>
+				<div class="decorations__block flex flex-col w-full h-full items-end justify-center md:justify-end">
+					<div class="relative translate-x-[1%] -translate-y-[15%] md:-translate-x-[90%] md:-translate-y-[50%] decoration w-full aspect-square rounded-[15px] border border-oceanBlue opacity-60 max-w-[225px]"></div>
+
+					<div class="relative translate-x-[70%] -translate-y-[20%] md:-translate-x-[25%] md:-translate-y-[35%] decoration w-full rounded-[15px] border border-oceanBlue opacity-60 max-w-[253px] h-full max-h-[271px]"></div>
+				</div>
+			</div>
+			<div class="footer__container relative z-[2] h-full w-full max-w-[1310px] mx-auto px-[15px] pt-[60px] pb-[15px] md:pt-[90px] flex flex-col gap-[50px]">
+				<div class="footer__body grid justify-center sm:justify-around sm:[grid-template-columns:repeat(2,auto)] md:[grid-template-columns:repeat(4,auto)] md:justify-between items-start  gap-[50px] flex-wrap">
+					<div class="footer__block max-w-[297px] flex flex-col gap-[30px]">
+						<a href="/" class="header__logo text-[25px] font-bold hover:text-oceanBlue transition duration-300">BTW</a>
+						<p class="footer__text line-through-[18.75px]">Мы обладаем разветвленной сетью компаний в различных странах и готовы предложить их ресурсы для успешного осуществления разнообразных сделок.</p>
+					</div>
+					<div class="footer__block max-w-[297px] flex flex-col gap-[30px]">
+						<div class="footer__block-chat text-[18px]">Информация</div>
+						<ul class="flex flex-col gap-[20px]">
+							<li class="menu__item"><a href="#" class="menu__link hover:text-oceanBlue transition duration-300">Home</a></li>
+							<li class="menu__item"><a href="#" class="menu__link hover:text-oceanBlue transition duration-300">Products</a></li>
+							<li class="menu__item"><a href="#" class="menu__link hover:text-oceanBlue transition duration-300">Services</a></li>
+							<li class="menu__item"><a href="#" class="menu__link hover:text-oceanBlue transition duration-300">Contact</a></li>
+							<li class="menu__item"><a href="#" class="menu__link hover:text-oceanBlue transition duration-300">About Us</a></li>
+						</ul>
+					</div>
+					<div class="footer__block max-w-[297px] flex flex-col gap-[30px]">
+						<div class="footer__block-chat text-[18px]">Другие ресурсы</div>
+						<ul class="flex flex-col gap-[20px]">
+							<li class="menu__item"><a href="#" class="menu__link hover:text-oceanBlue transition duration-300">Privacy Policy</a></li>
+							<li class="menu__item"><a href="#" class="menu__link hover:text-oceanBlue transition duration-300">Terms & Condition</a></li>
+
+						</ul>
+					</div>
+					<div class="footer__block max-w-[297px] flex flex-col gap-[30px]">
+						<div class="footer__block-chat text-[18px]">Контакты</div>
+						<div class="footer__actions flex flex-col gap-[20px] py-[1px]">
+							<a href="tel:+447778141560" class="number group flex items-center gap-10px ">
+								<svg class="dark:stroke-white" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16.2712 11.6483L12.1737 9.81203C11.988 9.73248 11.7855 9.70049 11.5843 9.71897C11.3832 9.73745 11.1898 9.8058 11.0218 9.91785C11.0048 9.92884 10.9885 9.94101 10.9732 9.95428L8.83166 11.7758C8.80944 11.7879 8.7847 11.7947 8.75941 11.7956C8.73412 11.7965 8.70897 11.7915 8.68594 11.781C7.30941 11.1166 5.88344 9.69927 5.21642 8.34182C5.20532 8.31914 5.19954 8.29422 5.19954 8.26896C5.19954 8.2437 5.20532 8.21878 5.21642 8.1961L7.04399 6.02765C7.05713 6.01162 7.06929 5.99482 7.08042 5.97734C7.19092 5.80864 7.25766 5.61508 7.27462 5.41413C7.29158 5.21318 7.25822 5.01117 7.17757 4.82633L5.35434 0.735777C5.2508 0.494306 5.07173 0.29293 4.84402 0.161871C4.61631 0.0308124 4.35224 -0.0228586 4.09143 0.00891317C2.95797 0.157926 1.91754 0.714559 1.16457 1.57479C0.411608 2.43503 -0.00236593 3.54 1.01721e-05 4.68322C1.01721e-05 11.4748 5.52521 17 12.3168 17C13.46 17.0022 14.5648 16.5881 15.425 15.8352C16.2852 15.0823 16.8419 14.042 16.9911 12.9086C17.0228 12.649 16.9699 12.3861 16.8401 12.159C16.7104 11.9319 16.5109 11.7528 16.2712 11.6483ZM12.3168 15.9591C6.09942 15.9591 1.04086 10.9006 1.04086 4.68322C1.03796 3.79322 1.3592 2.93262 1.94454 2.2622C2.52988 1.59177 3.33929 1.1574 4.22154 1.04023H4.24149C4.27645 1.04088 4.31039 1.05208 4.33887 1.07235C4.36735 1.09263 4.38903 1.12104 4.40109 1.15385L6.23126 5.24007C6.2417 5.26279 6.2471 5.2875 6.2471 5.3125C6.2471 5.3375 6.2417 5.36221 6.23126 5.38493L4.40022 7.55858C4.38663 7.57415 4.37416 7.59067 4.36292 7.60802C4.24835 7.78293 4.18088 7.98446 4.16705 8.19311C4.15322 8.40175 4.1935 8.61042 4.28399 8.79893C5.05336 10.3741 6.64066 11.9492 8.23317 12.7186C8.42277 12.8086 8.63247 12.8479 8.84179 12.8327C9.05112 12.8175 9.25293 12.7483 9.42755 12.6319C9.44403 12.6206 9.46051 12.6085 9.47612 12.5954L11.6168 10.7739C11.638 10.7626 11.6613 10.7559 11.6853 10.7544C11.7092 10.7529 11.7332 10.7566 11.7556 10.7653L15.854 12.6015C15.8874 12.6158 15.9156 12.6402 15.9344 12.6713C15.9532 12.7025 15.9618 12.7387 15.9589 12.775C15.8424 13.6576 15.4084 14.4677 14.7381 15.0537C14.0678 15.6397 13.2071 15.9615 12.3168 15.9591Z" fill="#292929" />
+								</svg>
+								<p class="group-hover:text-oceanBlue transition duration-300">+38 (098) 765 43 21</p>
+							</a>
+							<a href="#" class="mail group flex items-center gap-10px ">
+								<svg class="dark:stroke-white" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M16.8188 1.82433L9.71663 7.488C9.51481 7.64901 9.26096 7.73713 8.99888 7.73713C8.73679 7.73713 8.48294 7.64901 8.28113 7.488L1.18238 1.82433C1.14429 1.93474 1.12491 2.05033 1.125 2.16667V10.8333C1.125 11.1207 1.24353 11.3962 1.4545 11.5994C1.66548 11.8025 1.95163 11.9167 2.25 11.9167H15.75C16.0484 11.9167 16.3345 11.8025 16.5455 11.5994C16.7565 11.3962 16.875 11.1207 16.875 10.8333V2.16667C16.8755 2.05039 16.8565 1.9348 16.8188 1.82433ZM2.25 0H15.75C16.3467 0 16.919 0.228273 17.341 0.634602C17.7629 1.04093 18 1.59203 18 2.16667V10.8333C18 11.408 17.7629 11.9591 17.341 12.3654C16.919 12.7717 16.3467 13 15.75 13H2.25C1.65326 13 1.08097 12.7717 0.65901 12.3654C0.237053 11.9591 0 11.408 0 10.8333V2.16667C0 1.59203 0.237053 1.04093 0.65901 0.634602C1.08097 0.228273 1.65326 0 2.25 0ZM2.01375 1.08333L8.28675 6.06992C8.48766 6.22971 8.73994 6.31739 9.00052 6.31799C9.2611 6.31858 9.51381 6.23205 9.7155 6.07317L16.0515 1.08333H2.01375Z" fill="#292929" />
+								</svg>
+
+								<p class="group-hover:text-oceanBlue transition duration-300">example@gmail.com</p>
+							</a>
+						</div>
+						<div class="footer__socials flex items-center gap-[15px]">
+							<svg class="group cursor-pointer" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle class="group-hover:fill-black transition duration-300" cx="21.5" cy="21.5" r="21" fill="transparent" stroke="#07B2B2" />
+								<path d="M24.3818 10C22.8107 10 21.304 10.6141 20.1931 11.7072C19.0822 12.8003 18.4581 14.2829 18.4581 15.8288V19.074H15.2882C15.1294 19.074 15 19.2 15 19.3575V23.6425C15 23.7987 15.1281 23.926 15.2882 23.926H18.4581V32.7164C18.4581 32.8727 18.5862 33 18.7463 33H23.101C23.2598 33 23.3892 32.874 23.3892 32.7164V23.926H26.5873C26.7192 23.926 26.8345 23.8378 26.8665 23.7118L27.9552 19.4268C27.9659 19.385 27.9668 19.3414 27.9577 19.2992C27.9487 19.257 27.93 19.2174 27.9031 19.1833C27.8762 19.1493 27.8417 19.1218 27.8024 19.1028C27.763 19.0839 27.7198 19.074 27.676 19.074H23.3892V15.8288C23.3892 15.7005 23.4148 15.5735 23.4647 15.455C23.5146 15.3365 23.5877 15.2288 23.6799 15.1381C23.7721 15.0474 23.8815 14.9755 24.0019 14.9264C24.1223 14.8773 24.2514 14.8521 24.3818 14.8521H27.7118C27.8706 14.8521 28 14.726 28 14.5685V10.2836C28 10.1273 27.8719 10 27.7118 10H24.3818Z" fill="#07B2B2" />
+							</svg>
+							<svg class="group cursor-pointer" width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle class="group-hover:fill-black transition duration-300" cx="21.5" cy="21.5" r="21" fill="transparent" stroke="#07B2B2" />
+								<path d="M22 26C23.0609 26 24.0783 25.5786 24.8284 24.8284C25.5786 24.0783 26 23.0609 26 22C26 20.9391 25.5786 19.9217 24.8284 19.1716C24.0783 18.4214 23.0609 18 22 18C20.9391 18 19.9217 18.4214 19.1716 19.1716C18.4214 19.9217 18 20.9391 18 22C18 23.0609 18.4214 24.0783 19.1716 24.8284C19.9217 25.5786 20.9391 26 22 26Z" stroke="#07B2B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M13 26V18C13 16.6739 13.5268 15.4021 14.4645 14.4645C15.4021 13.5268 16.6739 13 18 13H26C27.3261 13 28.5979 13.5268 29.5355 14.4645C30.4732 15.4021 31 16.6739 31 18V26C31 27.3261 30.4732 28.5979 29.5355 29.5355C28.5979 30.4732 27.3261 31 26 31H18C16.6739 31 15.4021 30.4732 14.4645 29.5355C13.5268 28.5979 13 27.3261 13 26Z" stroke="#07B2B2" stroke-width="1.5" />
+								<path d="M27.5 16.51L27.51 16.499" stroke="#07B2B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+
+						</div>
+					</div>
+				</div>
+				<div class="footer__copy text-[11px] text-[#ACACAC]">© 2024 Copyright - BTW. All rights reserved.</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240620170401"></script>
+</body>
+
+</html>
