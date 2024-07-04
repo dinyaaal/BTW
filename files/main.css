@@ -1,0 +1,48 @@
+@font-face {
+	font-family: MonumentaPro;
+	font-display: swap;
+	src: url("../fonts/PFMonumentaPro-Regular.woff2") format("woff2"), url("../fonts/PFMonumentaPro-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: MonumentaProShaded;
+	font-display: swap;
+	src: url("../fonts/PFMonumentaPro-Shaded.woff2") format("woff2"), url("../fonts/PFMonumentaPro-Shaded.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.title{
+    @apply text-[20px] md:text-[35px] font-MonumentaPro
+}
+
+._header-scroll{
+    @apply bg-white shadow-main;
+    
+}
+.dark ._header-scroll{
+    @apply bg-darkBg
+}
+
+.main-contact__body{
+    @apply text-black relative min-h-[433px] h-full rounded-[15px] w-full px-[44px] py-[50px] flex  items-center justify-center bg-liteBlue
+}
+
+.breadcrumbs{
+    @apply pt-[80px]
+}
+
+.input-contact{
+    @apply bg-transparent w-full outline-none px-[15px] py-[5px] border-b border-black focus:placeholder:opacity-0  placeholder:transition-opacity placeholder:duration-300 placeholder:text-black
+}
+
+.continents-bg{
+	@apply w-full h-full object-cover opacity-10
+}
