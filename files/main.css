@@ -46,3 +46,7 @@
 .continents-bg{
 	@apply w-full h-full object-cover opacity-10
 }
+
+.about-us__item-image{
+	@apply w-[202px] md:w-[302px] aspect-square  relative object-cover
+}
