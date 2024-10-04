@@ -5,7 +5,6 @@
 }
 
 .gallery .gallerySwiper2 .swiper-slide {
-  pointer-events: none;
   opacity: 20%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -13,7 +12,6 @@
 
 .gallery .gallerySwiper2 .swiper-slide-active {
   opacity: 100%;
-  pointer-events: all;
 }
 
 .swiper-initialized {
